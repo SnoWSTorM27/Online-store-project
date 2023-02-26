@@ -1,0 +1,57 @@
+
+
+
+
+*, input {
+  border-color: var(--orange);
+  transition: background-color 200ms linear;
+}
+body {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--orange);
+  transition: background-color 200ms linear;
+}
+.container,
+.container-fluid,
+.card ,
+.input-group,
+div,
+.table,
+form [data-bs-theme='dark']{
+  color: var(--white);
+  background-color: var(--magenta);
+  border-color: var(--orange);
+  transition: background-color 200ms linear;
+}
+
+form [data-bs-theme='dark'] {
+  border-color: var(--orange);
+}
+
+a, .nav-link, .text-muted [data-bs-theme='dark'] {
+  color: var(--white);
+  transition: color 500ms linear;
+}
+
+.list-group-item {
+  color: var(--white);
+  background-color: var(--orange);
+}
+.invalid-feedback {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+button[data-bs-theme='dark'],
+.btn,
+button:hover,
+button:focus [data-bs-theme='dark'],
+button:active [data-bs-theme='dark'],
+button:not(:disabled):not(.disabled):active[data-bs-theme='dark'] {
+  color: var(--white);
+  background-color: var(--orange);
+  border-color: var(--magenta);
+  transition: color 500ms linear, background-color 500ms linear,
+    border-color 500ms linear;
+}

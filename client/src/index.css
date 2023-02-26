@@ -1,0 +1,8 @@
+/*Dark Theme*/
+[data-bs-theme='dark'] {
+  --white: #ffffff;
+  --magenta: #4e005c;
+  --orange: #fd793c;
+  --gray: #ba8fc2;
+  --black: #2b2b2c;
+}

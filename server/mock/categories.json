@@ -1,0 +1,37 @@
+[
+  {
+    "_id": "67rdca3eeb7f6fgeed471198",
+    "name": "Кондиционеры",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/kondicioneri.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471100",
+    "name": "Водонагреватели",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/vodonagrev2.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed4711012",
+    "name": "Радиаторы",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/radiatori.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471101",
+    "name": "Обогреватели",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/obogrivaleli.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471102",
+    "name": "Теплые полы",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/tepliy_pol.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471103",
+    "name": "Увлажнители, \nочистители",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/uvlajniteli.webp"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed47gstj",
+    "name": "Тепловые пушки",
+    "image": "https://www.rusklimat.ru/local/templates/rusklimat/images/menu/pushki.webp"
+  }
+]
