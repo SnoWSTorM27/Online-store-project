@@ -11,7 +11,6 @@ const initialState = localStorageService.getAccessToken() ? {
   error: null,
   auth: { userId: localStorageService.getUserId() },
   isLoggedIn: true,
-  adminEntities: null,
   dataLoaded: false
 } : {
   entities: null,
@@ -19,7 +18,6 @@ const initialState = localStorageService.getAccessToken() ? {
   error: null,
   auth: null,
   isLoggedIn: false,
-  adminEntities: null,
   dataLoaded: false
 };
 
@@ -36,15 +34,6 @@ const ordersSlice = createSlice({
       state.dataLoaded = true;
     },
     ordersRequestFailed: (state, action) => {
-      state.error = action.payload;
-      state.isLoading = false;
-    },
-    ordersAdminReceived: (state, action) => {
-      state.adminEntities = action.payload;
-      state.isLoading = false;
-      state.dataLoaded = true;
-    },
-    ordersAdminRequestFailed: (state, action) => {
       state.error = action.payload;
       state.isLoading = false;
     },
@@ -94,9 +83,9 @@ export const loadAdminOrdersList = () => async (dispatch) => {
   dispatch(ordersRequested());
   try {
     const { content } = await orderService.get();
-    dispatch(ordersAdminReceived(content));
+    dispatch(ordersReceived(content));
   } catch (error) {
-    dispatch(ordersAdminRequestFailed(error.message));
+    dispatch(ordersRequestFailed(error.message));
   }
 };
 
@@ -131,12 +120,12 @@ export const createPaidOrder = (payload) => async (dispatch) => {
 
 
 export const getOrders = () => (state) => state.orders.entities;
-export const getAdminOrders = () => (state) => state.orders.adminEntities;
+export const getAdminOrders = () => (state) => state.orders.entities;
 
 export const getOrdersLoadingStatus = () => (state) => state.orders.isLoading;
 export const getOrderById = (id) => (state) => {
-  if (state.orders.adminEntities) {
-    return state.orders.adminEntities.find((o) => o._id === id);
+  if (state.orders.entities) {
+    return state.orders.entities.find((o) => o._id === id);
   }
 };
 export const getLoadingStatus = () => (state) => state.orders.isLoading;

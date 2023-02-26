@@ -11,18 +11,15 @@ import { getBagDataStatus, loadUserBagList } from "../../../store/bag";
 
 const AppLoader = ({ children }) => {
   const dispatch = useDispatch();
-  const bagDataStatus = useSelector(getBagDataStatus())
+  const bagDataStatus = useSelector(getBagDataStatus());
   const goodsStatusLoading = useSelector(getGoodsLoadingStatus());
-  const goodsDataStatus = useSelector(getGoodsDataStatus())
-  const ordersDataStatus = useSelector(getOrdersDataStatus())
+  const goodsDataStatus = useSelector(getGoodsDataStatus());
+  const ordersDataStatus = useSelector(getOrdersDataStatus());
   const role = localStorageService.getUserRole();
   useEffect(() => {
     if (!bagDataStatus) dispatch(loadUserBagList());
     if (role === "ADMIN") {
-      if (!ordersDataStatus) {
-        dispatch(loadAdminOrdersList());
-        dispatch(loadUserOrdersList());
-      };
+      if (!ordersDataStatus) dispatch(loadAdminOrdersList());
     } else {
       if (!ordersDataStatus) dispatch(loadUserOrdersList());
     }

@@ -20,7 +20,7 @@ function OrderPage() {
   return (
     <div className="container">
       <h1 className="card-title mb-3">Заказ {orderId}</h1>
-      {!orderLoadingStatus && buyedGoods ? ( 
+      {!orderLoadingStatus && order ? ( 
         <div className="row gutters-xl">
           <div className="col-xl-1">
             <button
