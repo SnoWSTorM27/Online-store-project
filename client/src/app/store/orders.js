@@ -51,6 +51,7 @@ const ordersSlice = createSlice({
     orderPaidCreated: (state, action) => {
       state.entities = [];
       state.isLoading = false;
+      state.dataLoaded = false;
     },
     orderCreated: (state, action) => {
       state.isLoading = false;
